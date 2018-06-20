@@ -1,0 +1,10 @@
+@{ViewData["Title"] = "Quote Page";}
+<h2> Here are the awesome quotes! </h2>
+@foreach (var user in ViewBag.Quotes) {
+    <h3>Author: @user["name"]</h3>
+    <h5>Quote: @user["quote"] --posted on-- @user["created_at"]</h5>
+    <a href="/delete/@user["id"]"><button>DELETE</button></a>
+    
+    <hr>
+}
+<a href="/">HOME</a>

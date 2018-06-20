@@ -1,0 +1,15 @@
+@{ViewData["Title"] = "Home Page";}
+<h2> Welcome to the QuoteDojo! </h2>
+@if(ViewBag.Error != null){
+    <h3 style="color:red;">@ViewBag.Error</h3>
+}
+
+         <form action="/addQuote" method="POST"  >
+                <label  for="name">Your Name:</label>
+                <input type="text" name="name"><br><br>
+                <label  for="quote">Your Quote:</label>
+                <input type="text" name="quote"><br><br>
+                <button type="submit" >Add my Quote!</button>
+         </form>
+                <a href="/quotes">Skip to Quotes!</a>
+         
